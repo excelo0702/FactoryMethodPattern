@@ -1,16 +1,17 @@
 import ClotheStore.Clothes;
-import ClotheStore.KidsClothes;
-import ClotheStore.MensClothes;
-import ClotheStore.WomensClothes;
+import ClotheStore.KidsWarmClothes;
+import ClotheStore.MensWarmClothes;
+import ClotheStore.WomensWarmClothes;
 
-public class SimpleWayneFactory {
+
+public class HotRegionFactory {
     public Clothes createClothe(String clotheType) {
         if(clotheType.equals("Mens")){
-            return new MensClothes();
+            return new MensWarmClothes();
         } else if(clotheType.equals("Womens")) {
-            return new WomensClothes();
+            return new WomensWarmClothes();
         } else if(clotheType.equals("Kids")) {
-            return new KidsClothes();
+            return new KidsWarmClothes();
         } else {
             return new Clothes();
         }
