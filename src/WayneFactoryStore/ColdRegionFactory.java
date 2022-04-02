@@ -1,10 +1,13 @@
+package WayneFactoryStore;
+
 import ClotheStore.Clothes;
 import ClotheStore.KidsColdClothes;
 import ClotheStore.MensColdClothes;
 import ClotheStore.WomensColdClothes;
 
-public class ColdRegionFactory {
-    public Clothes createClothe(String clotheType) {
+public class ColdRegionFactory extends WayneFactory{
+    @Override
+    public Clothes createClothes(String clotheType) {
         if(clotheType.equals("Mens")){
             return new MensColdClothes();
         } else if(clotheType.equals("Womens")) {
